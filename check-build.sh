@@ -4,7 +4,7 @@ cd $WORKSPACE/$NAME-$VERSION
 make check
 
 echo "exit code is $?"
-
+make install DESTDIR=$WORKSPACE/build
 make install # DESTDIR=$SOFT_DIR
 
 mkdir -p $REPO_DIR
