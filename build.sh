@@ -7,7 +7,7 @@ module load ci
 # add dependencies
 module load gmp/5.1.3
 
-if [[ ! -e $SRC_DIR/$SOURCE_FILE ]] ; then
+if [[ ! -s $SRC_DIR/$SOURCE_FILE ]] ; then
   echo "Seems we are building from scratch - preparing "
   mkdir -p $SRC_DIR
   wget http://mirror.ufs.ac.za/gnu/gnu/mpfr/$SOURCE_FILE -O $SRC_DIR/$SOURCE_FILE
