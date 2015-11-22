@@ -18,7 +18,7 @@ else
   echo "Seems we already have that source file ${SRC_DIR}/${SOURCE_FILE}"
   echo "unpacking from here."
 fi
-tar -xvzf ${SRC_DIR}/${SOURCE_FILE} -C ${WORKSPACE}
+tar -xvzf ${SRC_DIR}/${SOURCE_FILE} -C ${WORKSPACE} --skip-old-files
 cd ${WORKSPACE}/${NAME}-${VERSION}
 ./configure  --with-gmp=${GMP_DIR} --prefix ${SOFT_DIR}
 make -j 8
