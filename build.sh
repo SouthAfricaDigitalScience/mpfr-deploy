@@ -13,12 +13,12 @@ echo ${GCC_INCLUDE_DIR}
 if [[ -s ${SRC_DIR/$SOURCE_FILE} ]] ; then
   echo "Seems we are building from scratch - preparing "
   mkdir -p ${SRC_DIR}
-  wget http://mirror.ufs.ac.za/gnu/gnu/mpfr/${SOURCE_FILE} -O ${SRC_DIR/}${SOURCE_FILE}
+  wget http://mirror.ufs.ac.za/gnu/gnu/mpfr/${SOURCE_FILE} -O ${SRC_DIR}/${SOURCE_FILE}
 else
-  echo "Seems we already have that source file $SRC_DIR/$SOURCE_FILE"
+  echo "Seems we already have that source file ${SRC_DIR}/${SOURCE_FILE}"
   echo "unpacking from here."
 fi
 tar -xvzf ${SRC_DIR}/${SOURCE_FILE} -C ${WORKSPACE}
 cd ${WORKSPACE}/${NAME}-${VERSION}
-./configure  --with-gmp=${GMP_DIR}--prefix ${SOFT_DIR}
+./configure  --with-gmp=${GMP_DIR} --prefix ${SOFT_DIR}
 make -j 8
