@@ -25,6 +25,8 @@ proc ModulesHelp { } {
 }
 
 module-whatis   "$NAME $VERSION."
+## Requires gmp
+prereq gmp
 setenv       MPFR_VERSION       $VERSION
 setenv       MPFR_DIR           /apprepo/$::env(SITE)/$::env(OS)/$::env(ARCH)/$NAME/$VERSION
 prepend-path LD_LIBRARY_PATH   $::env(MPFR_DIR)/lib
