@@ -10,6 +10,7 @@ cd ${WORKSPACE}/${NAME}-${VERSION}
 echo "All tests have passed, will now build into ${SOFT_DIR}"
 ./configure  --with-gmp=${GMP_DIR} --prefix ${SOFT_DIR}
 make install
+mkdir -p ${LIBRARIES_MODULES}/${NAME}
 
 # Now, create the module file for deployment
 (
