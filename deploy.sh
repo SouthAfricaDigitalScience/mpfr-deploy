@@ -6,8 +6,9 @@ module add deploy
 # Now, dependencies
 module add gmp
 echo ${SOFT_DIR}
-cd ${WORKSPACE}/${NAME}-${VERSION}
+cd ${WORKSPACE}/${NAME}-${VERSION}/build-${BUILD_NUMBER}
 echo "All tests have passed, will now build into ${SOFT_DIR}"
+rm -rf *
 ./configure  --with-gmp=${GMP_DIR} --prefix ${SOFT_DIR}
 make install
 mkdir -p ${LIBRARIES_MODULES}/${NAME}
