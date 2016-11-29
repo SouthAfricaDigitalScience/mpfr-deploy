@@ -2,6 +2,7 @@
 . /etc/profile.d/modules.sh
 # Add the module for the CI environment
 module add ci
+module list
 module avail
 module add gmp
 
