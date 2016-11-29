@@ -11,6 +11,9 @@ cd ${WORKSPACE}/${NAME}-${VERSION}/build-${BUILD_NUMBER}
 echo "All tests have passed, will now build into ${SOFT_DIR}"
 rm -rf *
 ../configure \
+--host=${ARCH} \
+--enable-static \
+--enable-shared \
 --with-gmp=${GMP_DIR} \
 --prefix ${SOFT_DIR}
 make install
