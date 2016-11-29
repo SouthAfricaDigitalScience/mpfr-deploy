@@ -5,13 +5,16 @@ echo ${SOFT_DIR}
 module add deploy
 # Now, dependencies
 module add gmp
-echo ${SOFT_DIR}
+echo "GMP is at ${GMP_DIR}"
+ls -l ${GMP_DIR}/include
 cd ${WORKSPACE}/${NAME}-${VERSION}/build-${BUILD_NUMBER}
 echo "All tests have passed, will now build into ${SOFT_DIR}"
 rm -rf *
-../configure  --with-gmp=${GMP_DIR} --prefix ${SOFT_DIR}
+../configure \
+--with-gmp=${GMP_DIR} \
+--prefix ${SOFT_DIR}
 make install
-mkdir -p ${LIBRARIES_MODULES}/${NAME}
+mkdir -vp ${LIBRARIES_MODULES}/${NAME}
 
 # Now, create the module file for deployment
 (

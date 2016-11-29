@@ -5,9 +5,6 @@ module load ci
 module add gmp
 SOURCE_FILE=${NAME}-${VERSION}.tar.gz
 echo "we'll now build ${NAME}-${VERSION} from ${SOURCE_FILE}"
-
-# add dependencies
-module add gmp/5.1.3
 echo "GCC Include path is now : "
 echo ${GCC_INCLUDE_DIR}
 
@@ -31,5 +28,7 @@ fi
 tar -xzf ${SRC_DIR}/${SOURCE_FILE} -C ${WORKSPACE} --skip-old-files
 mkdir ${WORKSPACE}/${NAME}-${VERSION}/build-${BUILD_NUMBER}
 cd ${WORKSPACE}/${NAME}-${VERSION}/build-${BUILD_NUMBER}
-../configure  --with-gmp=${GMP_DIR} --prefix ${SOFT_DIR}
+../configure \
+--with-gmp=${GMP_DIR}\
+--prefix ${SOFT_DIR}
 make -j 2

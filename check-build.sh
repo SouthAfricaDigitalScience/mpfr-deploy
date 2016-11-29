@@ -1,6 +1,7 @@
 #!/bin/bash -e
 . /etc/profile.d/modules.sh
-module load ci
+module add ci
+module add gmp
 echo ""
 cd ${WORKSPACE}/${NAME}-${VERSION}/build-${BUILD_NUMBER}
 make check
@@ -23,7 +24,7 @@ module-whatis   "$NAME $VERSION."
 ## Requires gmp
 prereq gmp
 setenv       MPFR_VERSION       $VERSION
-setenv       MPFR_DIR           /apprepo/$::env(SITE)/$::env(OS)/$::env(ARCH)/$NAME/$VERSION
+setenv       MPFR_DIR           /data/ci-build/$::env(SITE)/$::env(OS)/$::env(ARCH)/$NAME/$VERSION
 prepend-path LD_LIBRARY_PATH   $::env(MPFR_DIR)/lib
 prepend-path GCC_INCLUDE_DIR   $::env(MPFR_DIR)/include
 MODULE_FILE
