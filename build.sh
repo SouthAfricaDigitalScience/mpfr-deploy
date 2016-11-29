@@ -7,6 +7,7 @@ SOURCE_FILE=${NAME}-${VERSION}.tar.gz
 echo "we'll now build ${NAME}-${VERSION} from ${SOURCE_FILE}"
 echo "GCC Include path is now : "
 echo ${GCC_INCLUDE_DIR}
+mkdir -vp ${SRC_DIR}
 
 if [ ! -e ${SRC_DIR}/${SOURCE_FILE}.lock ] && [ ! -s ${SRC_DIR}/${SOURCE_FILE} ] ; then
   touch  ${SRC_DIR}/${SOURCE_FILE}.lock
