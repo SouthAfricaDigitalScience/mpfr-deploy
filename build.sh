@@ -1,8 +1,10 @@
 #!/bin/bash -e
 . /etc/profile.d/modules.sh
 # Add the module for the CI environment
-module load ci
+module add ci
+module avail
 module add gmp
+
 SOURCE_FILE=${NAME}-${VERSION}.tar.gz
 echo "we'll now build ${NAME}-${VERSION} from ${SOURCE_FILE}"
 echo "GCC Include path is now : "
