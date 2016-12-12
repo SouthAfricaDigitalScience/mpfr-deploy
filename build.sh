@@ -6,6 +6,8 @@ module list
 module avail
 module add gmp
 
+echo "What is in /data"
+ls -lht /data
 SOURCE_FILE=${NAME}-${VERSION}.tar.gz
 echo "we'll now build ${NAME}-${VERSION} from ${SOURCE_FILE}"
 echo "GCC Include path is now : "
