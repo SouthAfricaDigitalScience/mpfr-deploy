@@ -32,6 +32,8 @@ fi
 tar -xzf ${SRC_DIR}/${SOURCE_FILE} -C ${WORKSPACE} --skip-old-files
 mkdir ${WORKSPACE}/${NAME}-${VERSION}/build-${BUILD_NUMBER}
 cd ${WORKSPACE}/${NAME}-${VERSION}/build-${BUILD_NUMBER}
+echo $GMP_DIR
+ls $GMP_DIR/include
 ../configure \
 --host=${ARCH} \
 --enable-static \
