@@ -18,7 +18,7 @@ if [ ! -e ${SRC_DIR}/${SOURCE_FILE}.lock ] && [ ! -s ${SRC_DIR}/${SOURCE_FILE} ]
   touch  ${SRC_DIR}/${SOURCE_FILE}.lock
   echo "Seems we are building from scratch - preparing "
   mkdir -p ${SRC_DIR}
-  wget http://www.mpfr.org/mpfr-current/${SOURCE_FILE} -O ${SRC_DIR}/${SOURCE_FILE}
+  wget http://ftpmirror.gnu.org/mpfr/${SOURCE_FILE} -O ${SRC_DIR}/${SOURCE_FILE}
   echo "releasing lock"
   rm -v ${SRC_DIR}/${SOURCE_FILE}.lock
 elif [ -e ${SRC_DIR}/${SOURCE_FILE}.lock ] ; then
