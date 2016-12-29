@@ -11,6 +11,7 @@ cd ${WORKSPACE}/${NAME}-${VERSION}/build-${BUILD_NUMBER}
 echo "All tests have passed, will now build into ${SOFT_DIR}"
 rm -rf *
 ../configure \
+CFLAGS=-fPIC \
 --host=${ARCH} \
 --enable-static \
 --enable-shared \

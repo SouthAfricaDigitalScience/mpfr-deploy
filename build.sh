@@ -35,7 +35,7 @@ cd ${WORKSPACE}/${NAME}-${VERSION}/build-${BUILD_NUMBER}
 echo $GMP_DIR
 ls $GMP_DIR/include
 ../configure \
-CFLAGS=-fPIC
+CFLAGS=-fPIC \
 --host=${ARCH} \
 --enable-static \
 --enable-shared \
