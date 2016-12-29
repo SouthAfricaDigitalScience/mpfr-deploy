@@ -6,8 +6,6 @@ module list
 module avail
 module add gmp
 
-echo "What is in /data"
-ls -lht /data
 SOURCE_FILE=${NAME}-${VERSION}.tar.gz
 echo "we'll now build ${NAME}-${VERSION} from ${SOURCE_FILE}"
 echo "GCC Include path is now : "
@@ -37,6 +35,7 @@ cd ${WORKSPACE}/${NAME}-${VERSION}/build-${BUILD_NUMBER}
 echo $GMP_DIR
 ls $GMP_DIR/include
 ../configure \
+CFLAGS=-fPIC
 --host=${ARCH} \
 --enable-static \
 --enable-shared \
