@@ -50,4 +50,6 @@ Otherwise, [open a topic on the forum](https://discourse.sci-gaia.eu)
 
 # Citing
 
-<!-- waiting for DOI -->
+[![DOI](https://zenodo.org/badge/29202685.svg)](https://zenodo.org/badge/latestdoi/29202685)
+
+Cite as : Bruce Becker. (2017). SouthAfricaDigitalScience/mpfr-deploy: CODE-RADE Foundation Release 3 - MPFR [Data set]. Zenodo. http://doi.org/10.5281/zenodo.571362
