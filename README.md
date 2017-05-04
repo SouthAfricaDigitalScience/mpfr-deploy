@@ -47,3 +47,7 @@ The test phase does the following things :
 If you have a legitimate error, or need support, please [open an issue](../../issues)
 
 Otherwise, [open a topic on the forum](https://discourse.sci-gaia.eu)
+
+# Citing
+
+<!-- waiting for DOI -->
