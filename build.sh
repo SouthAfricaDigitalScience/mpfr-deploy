@@ -15,7 +15,9 @@
 # limitations under the License.
 
 # Add the module for the CI environment
+. /etc/profile.d/modules.sh
 module add ci
+module avail
 module add gmp
 
 SOURCE_FILE=${NAME}-${VERSION}.tar.gz
